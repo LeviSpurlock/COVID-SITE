@@ -6,21 +6,27 @@ h1{
 }
 h2{
     font-family: 'Open Sans';
-    font-size: 18px;
+    font-size: 30px;
     margin-bottom: 20px;
+    text-align: center;
+}
+footer{
+    text-align: center;
 }
 p{
-    font-size: 20px;
+    font-size: 18px;
 }
 b{
-    color: rgb(43, 80, 243);
+    color: rgb(69, 101, 245);
 }
 li{
-    font-size: 20px;
-    padding-bottom: 15px;
+    font-size: 16px;
+}
+img{
+    margin-bottom: 15px;
 }
 .header1{
-    font-size: 20px;
+    font-size: 16px;
 }
 .centered{
     text-align: center;
@@ -29,6 +35,13 @@ li{
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+.can{
+    text-align: left;
+    margin-top: 25px;
+}
+.can2{
+    text-align: left;
 }
 iframe{
     margin-top: 10px;
@@ -73,7 +86,7 @@ nav{
 .burger div{
    width: 25px;
    height: 2px;
-   background-color: rgb(219, 219, 219);
+   background-color: rgb(66, 66, 66);
    margin: 5px;
    transition: all 0.3s ease; 
 } 
