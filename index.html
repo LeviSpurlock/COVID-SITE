@@ -27,10 +27,10 @@
 
   <nav>
     <div class="logo">
-      <img src="image/Seal_of_Nashville,_Tennessee.png" alt="logo">
+      <a href="index.html"><img src="image/Seal_of_Nashville,_Tennessee.png" alt="logo"></a>
     </div>
     <ul class="nav-links">
-      <li><a href="index.html">Home </a></li>
+      <li><a class="current" href="index.html">COVID-19 </a></li>
       <li><a href="safer.html">Safer At Home </a></li>
       <li><a href="health.html">Staying Healthy </a></li>
       <li><a href="faq.html">FAQs </a></li>
@@ -85,39 +85,54 @@
           <li><b>Travel Information – State Department: International Travel</b></li>
         </ul>
       </div>
-      <div class="medium-12 cell">
-        <h1>Optional Videos</h1>
-      </div>
-
     </div>
   </div>
+
 <div class="grid-container videos">
   <div class="grid-x 2">
-    <div class="medium-6 cell">
-      <h2>S. Surgeon General: <b>Health Americans Should<br> Continue Donating Blood</b></h2>
-      <p class="centered"><iframe width="500" height="400" src="https://www.youtube.com/embed/P8gnR2cKZAY"
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe></p>
+    <div class="medium-12 cell">
+      <h1>Optional Videos</h1>
     </div>
     <div class="medium-6 cell">
-      <h2>S. Surgeon General: <b>How Can Millennials Stop the Spread of Coronavirus</b></h2>
-      <p class="centered"><iframe width="500" height="400" src="https://www.youtube.com/embed/Gu3ZbNgKqdk"
+      <div class="responsive-embed widescreen">
+     <iframe width="400" height="300" src="https://www.youtube.com/embed/P8gnR2cKZAY"
           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe></p>
+          allowfullscreen></iframe>
     </div>
+    <h3>Surgeon General: <b>Health Americans Should Continue Donating Blood</b></h3>
+  </div>
+
     <div class="medium-6 cell">
-      <h2>Deborah Birx: <b>How Can Millennials Fight the Coronavirus</b></h2>
+      <div class="responsive-embed widescreen">
+      <iframe width="400" height="300" src="https://www.youtube.com/embed/Gu3ZbNgKqdk"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+    </div>
+    <h3>Surgeon General: <b>How Can Millennials Stop the Spread of Coronavirus</b></h3>
+  </div>
+
+    <div class="medium-6 cell">
+      <div class="responsive-embed widescreen">
       <p class="centered"><iframe width="500" height="400" src="https://www.youtube.com/embed/zG_FzeQxEdE"
           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe></p>
     </div>
+    <h3>Deborah Birx: <b>How Can Millennials Fight the Coronavirus</b></h3>
+  </div>
+
     <div class="medium-6 cell">
-      <h2>Deborah Birx: <b>Where Can the Coronavirus Live?</b></h2>
+      <div class="responsive-embed widescreen">
       <p class="centered">
         <iframe width="500" height="400" src="https://www.youtube.com/embed/xmttyxPksHU" frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </p>
     </div>
+    <h3>Deborah Birx:<b>Where Can the Coronavirus Live?</b></h3>
+    </div>
+
+
+
+
     <div class="medium-12 cell">
       <footer>
           <hr>
@@ -126,7 +141,9 @@
   </div>
   </div>
 </div>
-
+<script src="app.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
-
 </html>

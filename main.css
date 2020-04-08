@@ -10,6 +10,13 @@ h2{
     margin-bottom: 20px;
     text-align: center;
 }
+h3{
+    font-size: 16px;
+    text-align: center;
+}
+h4{
+    font-size: 14px;
+}
 footer{
     text-align: center;
 }
@@ -28,6 +35,9 @@ img{
 .header1{
     font-size: 16px;
 }
+.nav-links .current{
+    color: rgb(231, 2, 181);
+}
 .centered{
     text-align: center;
 }
@@ -42,10 +52,17 @@ img{
 }
 .can2{
     text-align: left;
+    margin-top: 35px;
+}
+.pic{
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 iframe{
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .vids{
     text-align: center;
@@ -67,7 +84,7 @@ nav{
 }
 .nav-links{
     display: flex;
-    width: 25%;
+    width: 35%;
     justify-content: space-around;
 }
 .nav-links li{
@@ -89,6 +106,7 @@ nav{
    background-color: rgb(66, 66, 66);
    margin: 5px;
    transition: all 0.3s ease; 
+   z-index: 100;
 } 
 
 
@@ -102,14 +120,14 @@ nav{
        right: 0px;
        height: 92vh;
        top: 8vh;
-       background-color: rgb(108, 134, 250);
+       background-color: rgb(255, 255, 255);
        display: flex;
        flex-direction: column;
        align-items: center;
-       width: 50%;
+       width: 45%;
        transform: translateX(100%);
        transition: transform 0.5s ease-in;
-       z-index: 100;
+       z-index: 101;
     }
     .nav-links li{
         opacity: 0;
@@ -135,10 +153,13 @@ nav{
 
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
+    z-index: 100;
 }
 .toggle .line2{
     opacity: 0;
 }
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
+    z-index: 100;
+
 }
