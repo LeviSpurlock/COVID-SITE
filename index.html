@@ -9,12 +9,14 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
   <!-- Compressed JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/js/foundation.min.js"
     integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA=="
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Open+Sans:400,700|Source+Sans+Pro&display=swap"
@@ -23,8 +25,6 @@
 </head>
 
 <body>
-
-
   <nav>
     <div class="logo">
       <a href="index.html"><img src="image/Seal_of_Nashville,_Tennessee.png" alt="logo"></a>
@@ -69,7 +69,7 @@
       <div class="medium-12 cell">
         <p>
           To prevent the spread of COVID-19, the Centers for Disease Control and Prevention recommends taking
-          <b>preventative safety measures</b>, including <b>social distancing</b>.
+          preventative safety measures, including social distancing.
         </p>
       </div>
       <div class="medium-12 cell">
@@ -79,71 +79,134 @@
       </div>
       <div class="medium-12 cell">
         <ul>
-          <li> The President’s Guidelines for America: <b>15 Days to Slow the Spread</b></li>
-          <li> CDC Print <b>Resources and Fact Sheets</b></li>
-          <li><b>How COVID-19 Spreads, Symptoms, etc.</b></li>
-          <li><b>Travel Information – State Department: International Travel</b></li>
+          <li> The President’s Guidelines for America: <a
+              href="https://www.whitehouse.gov/wp-content/uploads/2020/03/03.16.20_coronavirus-guidance_8.5x11_315PM.pdf"><b>15
+                Days to Slow the Spread</b></a></li>
+          <li> CDC Print <a
+              href="https://www.cdc.gov/coronavirus/2019-ncov/communication/print-resources.html?Sort=Date%3A%3Adesc&CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fcommunication%2Ffactsheets.html">
+              <b>Resources and Fact Sheets</b></a></li>
+          <li><a
+              href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/how-covid-spreads.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fcoronavirus%2F2019-ncov%2Fabout%2Findex.html"><b>How
+                COVID-19 Spreads, Symptoms, etc.</b></a></li>
+          <li><a href="https://travel.state.gov/content/travel/en/international-travel.html"> <b>Travel Information –
+                State Department: International Travel</b> </a></li>
         </ul>
+      </div>
+      <div class="medium-12 cell" style="margin-top: 45px;">
+        <h2>
+          Case Tracker
+        </h2>
+      </div>
+      <div class="medium-12 cell">
+        <canvas id="myChart">
+        </canvas>
+      </div>
+      <div class="medium-12 cell" style="margin-top: 100px;">
+        <h2>
+          Age Groups
+        </h2>
+      </div>
+      <div class="medium-12 cell">
+        <canvas id="myChart2">
+        </canvas>
       </div>
     </div>
   </div>
 
-<div class="grid-container videos">
-  <div class="grid-x 2">
-    <div class="medium-12 cell">
-      <h1>Optional Videos</h1>
-    </div>
-    <div class="medium-6 cell">
-      <div class="responsive-embed widescreen">
-     <iframe width="400" height="300" src="https://www.youtube.com/embed/P8gnR2cKZAY"
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-    </div>
-    <h3>Surgeon General: <b>Health Americans Should Continue Donating Blood</b></h3>
-  </div>
-
-    <div class="medium-6 cell">
-      <div class="responsive-embed widescreen">
-      <iframe width="400" height="300" src="https://www.youtube.com/embed/Gu3ZbNgKqdk"
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-    </div>
-    <h3>Surgeon General: <b>How Can Millennials Stop the Spread of Coronavirus</b></h3>
-  </div>
-
-    <div class="medium-6 cell">
-      <div class="responsive-embed widescreen">
-      <p class="centered"><iframe width="500" height="400" src="https://www.youtube.com/embed/zG_FzeQxEdE"
-          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe></p>
-    </div>
-    <h3>Deborah Birx: <b>How Can Millennials Fight the Coronavirus</b></h3>
-  </div>
-
-    <div class="medium-6 cell">
-      <div class="responsive-embed widescreen">
-      <p class="centered">
-        <iframe width="500" height="400" src="https://www.youtube.com/embed/xmttyxPksHU" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </p>
-    </div>
-    <h3>Deborah Birx:<b>Where Can the Coronavirus Live?</b></h3>
-    </div>
-
-
-
-
-    <div class="medium-12 cell">
-      <footer>
+  <div class="grid-container videos">
+    <div class="grid-x 2">
+      <div class="medium-12 cell">
+        <footer>
           <hr>
           <p>© 2020 Metropolitan Government of Nashville and Davidson County, Tennessee</p>
-      </footer>
+        </footer>
+      </div>
+    </div>
   </div>
-  </div>
-</div>
-<script src="app.js"></script>
-<script>
-  AOS.init();
-</script>
+  <script src="app.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+
+    Chart.defaults.global.defaultFontFamily = 'Montserrat';
+    Chart.defaults.global.defaultFontSize = 18;
+
+    let varChart = new Chart(myChart, {
+      type: 'bar',
+      data: {
+        labels: ['Total', 'Active', 'Deaths', 'Recovered'],
+        datasets: [{
+          label: 'Cases',
+          data: [
+            1492,
+            1151,
+            17,
+            324
+          ],
+          backgroundColor: 'rgb(70, 87, 240)',
+          borderWidth: 2,
+          borderColor: 'black  '
+        }]
+      },
+      options: {}
+    });
+  </script>
+  <script>
+    let myChart2 = document.getElementById('myChart2').getContext('2d');
+
+    Chart.defaults.global.defaultFontFamily = 'Montserrat';
+    Chart.defaults.global.defaultFontSize = 18;
+
+    let varChart2 = new Chart(myChart2, {
+      type: 'pie',
+      data: {
+        labels: ['Unknown', '0-10', '11-20', '21-30', '31-40', '41-50', '51-60', '61-70', '71-80', '81+'],
+        datasets: [{
+          label: 'Age Groups',
+          data: [
+            10,
+            35,
+            109,
+            565,
+            377,
+            283,
+            263,
+            159,
+            79,
+            23
+          ],
+          options: {
+            title: {
+              display: true,
+              text: 'Age Groups'
+            }
+          },
+          backgroundColor: [
+            'rgb(70, 87, 240)',
+            'rgb(170, 87, 240)',
+            'rgb(70, 187, 240)',
+            'rgb(0,255,255)',
+            'rgb(152,251,152)',
+            'rgb(255,215,0)',
+            'rgb(255,0,0)',
+            'rgb(0,206,209)',
+            'rgb	(146,139,87)',
+            'rgb(75,0,130)',
+          ],
+          legend: {
+            display: true,
+            position: 'right',
+            labels: {
+              fontColor: '#000'
+            }
+          },
+        }]
+      },
+      options: {}
+    });
+  </script>
 </body>
+
 </html>
