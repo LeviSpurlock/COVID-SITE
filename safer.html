@@ -21,132 +21,164 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Open+Sans:400,700|Source+Sans+Pro&display=swap"
         rel="stylesheet">
-    <title>COVID-19 - Staying Healthy</title>
+    <!-- This loads jQuery JavaScript (this must be before the Foundation js below) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- This loads Foundation JavaScript (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.2/js/foundation.min.js"></script>
+    <!-- Finally, this starts foundation for everything on the page (optional) -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).foundation();
+        });
+    </script>
+    <title>COVID-19 - What is COVID-19?</title>
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="image/Seal_of_Nashville,_Tennessee.png" alt="logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">COVID-19</a></li>
-            <li><a class="current" href="safer.html">Safer At Home </a></li>
-            <li><a href="health.html">Staying Healthy </a></li>
-            <li><a href="faq.html">FAQs </a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
-    <div class="grid-container home">
-        <div class="grid-x">
-            <div class="medium-12 cell">
-                <h1>Safer At Home Order</h1>
-                <p class="header1">To combat the spread of COVID-19, the Metro Public Health Department has issued a
-                    Safer at Home Order
-                    directing all residents of Nashville and Davidson County to stay inside their homes unless they are
-                    engaged in certain “essential activities.”</p>
-            </div>
-            <div class="medium-12 cell">
-                <p class="header1">When you are outside of your home for necessary tasks, please remember to stay at
-                    least 6 feet away from others and practice healthy hand and respiratory hygiene.</p>
-            </div>
-            <div class="medium-12 cell">
-                <p class="header1">Mayor Cooper announced March 31 <b>the extension of the Safer at Home Order to April 24 to further contain and combat the spread of the coronavirus in Davidson County.</b></p>
-            </div>
-            <div class="medium-12 cell" style="margin-top: 25px;">
-                <h2>
-                    Safer At Home - The Bottom Line
-                </h2>
-            </div>
-            <div class="medium-6 cell">
-                <h2 class="can">
-                    You <b>can:</b>
-                </h2>
-                <ul>
-                    <li>
-                        <p>Go to the grocery, convenience or warehouse store</p>
-                    </li>
-                    <li>
-                        <p>Go to the pharmacy to pick up medications and other health care necessities</p>
-                    </li>
-                    <li>
-                        <p>Go to medical appointments (check first with your health care provider)
-                        </p>
-                    </li>
-                    <li>
-                        <p>Go to a restaurant for take-out, delivery or drive-thru
-                        </p>
-                    </li>
-                    <li>
-                        <p>Care for a friend or family member
-                        </p>
-                    </li>
-                    <li>
-                        <p>Take a walk, ride your bike, hike, jog and be outdoors for exercise — maintaining at least 6
-                            feet between you and others
-                        </p>
-                    </li>
-                    <li>
-                        <p>Walk your pets and take them to the veterinarian, if necessary
-                        </p>
-                    </li>
-                    <li>
-                        <p>Help someone to get necessary supplies
-                        </p>
-                    </li>
-                    <li>
-                        <p>Receive deliveries from businesses permitted to deliver
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="medium-6 cell">
-                <h2 class="can">
-                    You <b>cannot:</b>
-                </h2>
-                <ul>
-                    <li>
-                        <p>Go to work, unless you are providing essential services as defined by this Order</p>
-                    </li>
-                    <li>
-                        <p>Visit friends and family without an urgent need</p>
-                    </li>
-                    <li>
-                        <p>Maintain less than 6 feet of distance from others when you go out</p>
-                    </li>
-                    <li>
-                        <p>Visit loved ones in the hospital, nursing home, skilled nursing facility or other residential
-                            care facility, except for limited exceptions as stated on the facility websites</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="medium-12 cell">
-                <h2 class="can">
-                    We understand that not everyone is Safer at Home.
-                </h2>
-              </div>
-              <div class="medium-12 cell">
-              <p>
-                The <b>YWCA of Nashville‘s</b> Domestic Violence Crisis & Support Help Line is anonymous, confidential, and available 24/7. <br>
-                Call <b>1-800-334-4628 or Text 615-983-5170 for help without speaking a word.</b>
-              </p>
-              </div>
-              <div class="medium-12 cell">
-                  <footer>
-                      <hr>
-                      <p>© 2020 Metropolitan Government of Nashville and Davidson County, Tennessee</p>
-                  </footer>
-              </div>
-        </div>
+    <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+        <div class=""><img src="image/Seal_of_Nashville,_Tennessee.png" alt="" width="158" height="158" /></div>
+        <div class="cell medium-shrink"><a href="index.html">Home</a></div>
+        <div class="cell medium-shrink"><a href="health.html">Staying Health</a></div>
+        <div class="cell medium-shrink"><a href="safer.html">Safer at Home</a></div>
+        <div class="cell medium-shrink"><a href="faq.html">FAQ</a></div>
     </div>
-    <script src="app.js"></script>
-    <script>
-      AOS.init();
-    </script>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+        <img src="image/menu.svg" class="show-for-small-only" data-toggle="offCanvas">
+
+
+        <div class="grid-x header align-middle hide-for-small-only">
+            <div class="cell medium-2"><img src="image/Seal_of_Nashville,_Tennessee.png" alt="" width="158"
+                    height="158" />
+            </div>
+            <div class="cell medium-shrink"><a class="current" href="index.html">
+                    <h3>Home</h3>
+                </a></div>
+            <div class="cell medium-shrink"><a href="health.html">
+                    <h3>Staying Health
+                </a></h3>
+            </div>
+            <div class="cell medium-shrink"><a href="safer.html">
+                    <h3>Safer at Home
+                </a></h3>
+            </div>
+            <div class="cell medium-shrink"><a href="faq.html">
+                    <h3>FAQ
+                </a></h3>
+            </div>
+        </div>
+        <div class="grid-container home">
+            <div class="grid-x">
+                <div class="medium-12 cell">
+                    <h1>Safer At Home Order</h1>
+                    <p class="header1">To combat the spread of COVID-19, the Metro Public Health Department has issued a
+                        Safer at Home Order
+                        directing all residents of Nashville and Davidson County to stay inside their homes unless they
+                        are
+                        engaged in certain “essential activities.”</p>
+                </div>
+                <div class="medium-12 cell">
+                    <p class="header1">When you are outside of your home for necessary tasks, please remember to stay at
+                        least 6 feet away from others and practice healthy hand and respiratory hygiene.</p>
+                </div>
+                <div class="medium-12 cell">
+                    <p class="header1">Mayor Cooper announced March 31 <b>the extension of the Safer at Home Order to
+                            April 24 to further contain and combat the spread of the coronavirus in Davidson County.</b>
+                    </p>
+                </div>
+                <div class="medium-12 cell" style="margin-top: 25px;">
+                    <h2>
+                        Safer At Home - The Bottom Line
+                    </h2>
+                </div>
+                <div class="medium-6 cell">
+                    <h2 class="can">
+                        You <b>can:</b>
+                    </h2>
+                    <ul>
+                        <li>
+                            <p>Go to the grocery, convenience or warehouse store</p>
+                        </li>
+                        <li>
+                            <p>Go to the pharmacy to pick up medications and other health care necessities</p>
+                        </li>
+                        <li>
+                            <p>Go to medical appointments (check first with your health care provider)
+                            </p>
+                        </li>
+                        <li>
+                            <p>Go to a restaurant for take-out, delivery or drive-thru
+                            </p>
+                        </li>
+                        <li>
+                            <p>Care for a friend or family member
+                            </p>
+                        </li>
+                        <li>
+                            <p>Take a walk, ride your bike, hike, jog and be outdoors for exercise — maintaining at
+                                least 6
+                                feet between you and others
+                            </p>
+                        </li>
+                        <li>
+                            <p>Walk your pets and take them to the veterinarian, if necessary
+                            </p>
+                        </li>
+                        <li>
+                            <p>Help someone to get necessary supplies
+                            </p>
+                        </li>
+                        <li>
+                            <p>Receive deliveries from businesses permitted to deliver
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="medium-6 cell">
+                    <h2 class="can">
+                        You <b>cannot:</b>
+                    </h2>
+                    <ul>
+                        <li>
+                            <p>Go to work, unless you are providing essential services as defined by this Order</p>
+                        </li>
+                        <li>
+                            <p>Visit friends and family without an urgent need</p>
+                        </li>
+                        <li>
+                            <p>Maintain less than 6 feet of distance from others when you go out</p>
+                        </li>
+                        <li>
+                            <p>Visit loved ones in the hospital, nursing home, skilled nursing facility or other
+                                residential
+                                care facility, except for limited exceptions as stated on the facility websites</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="medium-12 cell">
+                    <h2 class="can">
+                        We understand that not everyone is Safer at Home.
+                    </h2>
+                </div>
+                <div class="medium-12 cell">
+                    <p>
+                        The <b>YWCA of Nashville‘s</b> Domestic Violence Crisis & Support Help Line is anonymous,
+                        confidential, and available 24/7. <br>
+                        Call <b>1-800-334-4628 or Text 615-983-5170 for help without speaking a word.</b>
+                    </p>
+                </div>
+                <div class="medium-12 cell">
+                    <footer>
+                        <hr>
+                        <p>© 2020 Metropolitan Government of Nashville and Davidson County, Tennessee</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script>
+            AOS.init();
+        </script>
 </body>
 
 </html>
